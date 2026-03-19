@@ -1,16 +1,33 @@
 class SortedOrNot{
     public static void main(String[] args){
-        int arr[]={1,4,4,1,5};
-        System.out.println(ifSorted(arr));
+        int arr[]=ArrayUtil.inputArr();
+        System.out.println("If Array sorted in Ascending:"+ifSortedAsc(arr));
+        System.out.println("If Array sorted in Descending:"+ifSortedDesc(arr));
 
     }
     
 
-    public static String ifSorted(int arr[]){
+    public static String ifSortedAsc(int arr[]){
         int i=0;
         while(i<arr.length){
             while(i!=arr.length-1){
             if(arr[i]>arr[i+1]){
+                return "Not Sorted";
+            }
+            i++;
+           
+        }
+        i++;
+        }
+
+        return "Sorted";
+    }
+
+      public static String ifSortedDesc(int arr[]){
+        int i=0;
+        while(i<arr.length){
+            while(i!=arr.length-1){
+            if(arr[i]<arr[i+1]){
                 return "Not Sorted";
             }
             i++;
