@@ -19,7 +19,7 @@ public class PalindromeArr {
 
         while(i<j){
             if(arr[i]==arr[j]){
-                i++;
+                i++;     
                 j--;
             }
             else {
