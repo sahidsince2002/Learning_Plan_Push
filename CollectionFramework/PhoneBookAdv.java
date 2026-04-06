@@ -1,6 +1,11 @@
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.Map;
 import java.util.TreeSet;
 
@@ -45,13 +50,34 @@ class Contacts {
 
 }
     public void sortContact(Map <Integer,String> contact){
-            TreeSet <String> value = new TreeSet<>(contact.values());
+            
 
+//             List <String> value = new ArrayList<>(contact.values());
+                     
+                      
+//                      value.sort(new Comparator<String>() {
+//                         public int compare(String s1, String s2) {
+//                             return s1.toLowerCase().compareTo(s2.toLowerCase());
+//                         }
+                       
+// });
+//                     for (String i : value) {
+//                             System.out.println(i.toLowerCase());           
+//                                         }
+                      
+//     }
 
-                      for (String item : value) {
-                        System.out.println(item);
-                      }
-    }
+            //   Map <Integer, String> tm = new TreeMap<>(contact);
+              
+            //   for(Map.Entry<Integer,String> entry : tm.entrySet()){
+            //            System.out.println(" "+entry.getKey()+"-> "+entry.getValue());
+            //   }
+
+            List <Map.Entry <Integer,String>> list = new ArrayList<>(contact.entrySet());
+            System.out.println(list);
+            Collections.sort(list, (a,b)->a.getValue() - b.getValue());
+
+}
 }
 
 public class PhoneBookAdv {
@@ -77,3 +103,10 @@ public class PhoneBookAdv {
         }
     }
 }
+
+// TreeSet <String> value = new TreeSet<>(contact.values());
+
+
+            //           for (String item : value) {
+            //             System.out.println(item);
+            //           }
