@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.TreeSet;
 
 class Contacts {
@@ -75,7 +76,8 @@ class Contacts {
 
             List <Map.Entry <Integer,String>> list = new ArrayList<>(contact.entrySet());
             System.out.println(list);
-            Collections.sort(list, (a,b)->a.getValue() - b.getValue());
+            Collection.sort(list)
+           
 
 }
 }
