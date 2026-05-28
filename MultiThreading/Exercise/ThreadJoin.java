@@ -1,3 +1,5 @@
+package MultiThreading.Exercise;
+
 
 
 class NewThread extends Thread {

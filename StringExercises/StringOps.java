@@ -1,10 +1,11 @@
 import java.lang.String;
+import java.util.Arrays;
 
 public class StringOps {
     public static void main(String[] args) {
         String name = "sammer";
         name = name.toLowerCase();
-       System.out.println();
+        System.out.println();
     
         for(int i=0;i<name.length();i++){
             System.out.print(" "+name.charAt(i));    // to print the characters of string 
@@ -54,5 +55,37 @@ public class StringOps {
            // System.out.println();
         }
 
+        // STRING SORTING 
+        char[] arr = name.toCharArray();
+        Arrays.sort(arr);
+        String var = new String(arr);
+
+        System.out.println(var);
+
     }
+
+
+   //STRING REVERSAL USING OPTIMIZED APPROACH
+
+class Main {
+    public static void main(String[] args) {
+        String name = "sahid";
+        char arr[] = name.toCharArray();
+        int low = 0;
+        int high = name.length() -1 ;
+        
+        while(low < high) {
+            char temp = arr[low];
+            arr[low] = arr[high];
+            arr[high] = temp;
+            
+            low++;
+            high--;
+        }
+        System.out.print(arr);
+
+
+        
+    }
+}
 }
